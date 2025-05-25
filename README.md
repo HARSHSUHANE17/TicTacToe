@@ -1,12 +1,53 @@
-# React + Vite
+# Tic Tac Toe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern twist on the classic Tic Tac Toe game where players use emojis instead of X's and O's.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React 19
+- JavaScript (ES6+)
+- CSS 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Emoji Categories
+Players can choose from three themed categories:
+- 🐶 Animals (🐶, 🐱, 🐵, 🐰)
+- 🍕 Food (🍕, 🍟, 🍔, 🍩)
+- ⚽️ Sports (⚽️, 🏀, 🏈, 🎾)
 
-## Expanding the ESLint configuration
+## Vanishing Feature Implementation
+The game implements a unique "vanishing" mechanic:
+- Each player can only have 3 emojis on the board at a time
+- When placing a 4th emoji, the oldest one automatically disappears
+- This is implemented using a First-In-First-Out (FIFO) queue system
+- The state is managed using React's useState hooks to track:
+  - Current board state
+  - Player moves history
+  - Turn order
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Future Improvements
+With more time, I would add:
+1. Player score tracking
+2. Custom emoji category creation
+3. Undo/redo functionality
+4. Game history replay
+5. Multiplayer support
+6. Sound effects and animations
+7. Dark/light theme toggle
+
+## Features
+
+- Interactive game board
+- Turn-based gameplay
+- Win detection
+- Modern UI with smooth animations
+- Responsive design
+
+## Winning Conditions
+
+A player wins when they achieve one of the following patterns:
+- Three marks in a horizontal row
+- Three marks in a vertical column
+- Three marks in a diagonal line (either top-left to bottom-right or top-right to bottom-left)
+
+
+
+
